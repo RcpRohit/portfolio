@@ -9,12 +9,65 @@
       margin: 0; padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
       background: #1e1e2f;
       color: #fff;
-      scroll-behavior: smooth;
+    }
+
+    /* --- Navbar --- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #121225;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ffc8;
+      display: flex;
+      align-items: center;
+    }
+
+    .live-dot {
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      margin-left: 10px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffc8;
+    }
+
+    /* --- Section Spacing --- */
+    section {
+      padding-top: 100px;
     }
 
     h2.section-title {
@@ -22,6 +75,7 @@
       margin-bottom: 30px;
       font-size: 2.5rem;
       color: #00ffc8;
+      animation: fadeInDown 1s ease-in-out;
     }
 
     .container {
@@ -30,6 +84,7 @@
       margin: auto;
     }
 
+    /* --- Home Section --- */
     .home {
       display: flex;
       flex-direction: column;
@@ -103,13 +158,14 @@
       transform: scale(1.05);
     }
 
-    .skills, .projects, .contact {
+    /* --- Skills Section --- */
+    .skills {
       background: #29293d;
       border-radius: 20px;
       margin-bottom: 60px;
     }
 
-    .skills-list, .projects-list {
+    .skills-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -117,7 +173,7 @@
       padding: 20px;
     }
 
-    .skill-box, .project-card {
+    .skill-box {
       background: #1a1a2e;
       padding: 20px;
       border-radius: 15px;
@@ -127,7 +183,61 @@
       text-align: center;
     }
 
-    .skill-box:hover, .project-card:hover {
+    .skill-box:hover {
+      transform: scale(1.05);
+    }
+
+    /* --- Education Section --- */
+    .education {
+      background: #29293d;
+      border-radius: 20px;
+      margin-bottom: 60px;
+    }
+
+    .education-list {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .education-box {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0,255,200,0.2);
+      transition: 0.3s;
+    }
+
+    .education-box:hover {
+      transform: scale(1.05);
+    }
+
+    /* --- Projects Section --- */
+    .projects {
+      background: #29293d;
+      border-radius: 20px;
+      margin-bottom: 60px;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,255,200,0.2);
+      transition: 0.3s;
+      width: 250px;
+      text-align: center;
+    }
+
+    .project-card:hover {
       transform: scale(1.05);
     }
 
@@ -140,6 +250,14 @@
       border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    /* --- Contact Section --- */
+    .contact {
+      background: #29293d;
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 60px;
     }
 
     .contact form {
@@ -178,9 +296,25 @@
       padding: 20px;
       color: #888;
     }
+
   </style>
 </head>
 <body>
+
+  <!-- Header with Navigation Links -->
+  <header>
+    <div class="logo">
+      Rohit Nikam
+      <div class="live-dot"></div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <!-- Home Section -->
   <section class="home" id="home">
@@ -188,11 +322,26 @@
       <img src='raj.jpg' alt="Profile">
     </div>
     <h1>Rohit Nikam</h1>
-    <h3>Java Develeoper </h3>
+    <h3>Java Developer</h3>
     <div class="btns">
       <a href="https://www.linkedin.com/in/rohit-nikam-975824257/" target="_blank">LinkedIn</a>
       <a href="https://github.com/RcpRohit" target="_blank">GitHub</a>
       <a href="https://yourdomain.com/resume.pdf" target="_blank">Resume</a>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education container" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="education-list">
+      <div class="education-box">
+        <h3>B-Tech Computer </h3>
+        <p>R. C. Patel Institute Shirpur | 2022-2026</p>
+      </div>
+      <div class="education-box">
+        <h3>High School</h3>
+        <p>R. C. patel Secondary School Shirpur | 2016-2021</p>
+      </div>
     </div>
   </section>
 
@@ -216,17 +365,17 @@
       <div class="project-card">
         <h3>CRM FOR ISP</h3>
         <p>SERVICE MAN AND USER MAPPING</p>
-        <a href="https://github.com/your-github/student-management" target="_blank">View</a>
+        <a href="https://github.com/RcpRohit/CRM-FOR-ISP" target="_blank">View</a>
       </div>
       <div class="project-card">
         <h3>Inventory System</h3>
         <p>Track raw & processed items in warehouse.</p>
-        <a href="https://github.com/your-github/inventory-system" target="_blank">View</a>
+        <a href="https://github.com/RcpRohit/Inventory-Application" target="_blank">View</a>
       </div>
       <div class="project-card">
         <h3>TNP REVIEW SYSTEM</h3>
         <p>REVIEW SYSTEM FOR THE ST</p>
-        <a href="https://github.com/your-github/secure-pariksha" target="_blank">View</a>
+        <a href="https://github.com/RcpRohit/Review-System-Backend-2" target="_blank">View</a>
       </div>
     </div>
   </section>
@@ -234,16 +383,16 @@
   <!-- Contact Section -->
   <section class="contact container" id="contact">
     <h2 class="section-title">Contact Me</h2>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd2Nv6ouLTF7lDNaDuHuOJWyFhoUfNVpjs_EYknSJHTaaWXEA/viewform?usp=header" method="POST" enctype="text/plain">
-      <input type="text" name="entry.1000000" placeholder="Your Name" required />
-      <input type="email" name="entry.1000001" placeholder="Your Email" required />
-      <textarea name="entry.1000002" rows="5" placeholder="Your Message..." required></textarea>
+    <form action="https://formsubmit.co/rohitnikam2134@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    &copy; 2025 Rohit Nikam. All rights reserved.
+    <p>&copy; 2025 Rohit Nikam. All Rights Reserved.</p>
   </footer>
 
 </body>
