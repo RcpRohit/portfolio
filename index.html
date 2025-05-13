@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohit Nikam | Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #1e1e2f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    h2.section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #00ffc8;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: radial-gradient(circle, rgba(63,94,251,0.2) 0%, rgba(70,252,199,0.1) 100%);
+    }
+
+    .circle-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #fff;
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+      margin-bottom: 20px;
+    }
+
+    .circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .home h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .home h3 {
+      color: #aaa;
+      font-size: 1.2rem;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3.5s steps(40, end) forwards, blink 0.8s step-end infinite;
+    }
+
+    @keyframes typing {
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .btns {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btns a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background-color: #333;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .btns a:hover {
+      background-color: #00ffc8;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    .skills, .projects, .contact {
+      background: #29293d;
+      border-radius: 20px;
+      margin-bottom: 60px;
+    }
+
+    .skills-list, .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .skill-box, .project-card {
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,255,200,0.2);
+      transition: 0.3s;
+      width: 250px;
+      text-align: center;
+    }
+
+    .skill-box:hover, .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background: #00ffc8;
+      color: #000;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .contact button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #00ffc8;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="circle-image">
+      <img src='raj.jpg' alt="Profile">
+    </div>
+    <h1>Rohit Nikam</h1>
+    <h3>Java Develeoper </h3>
+    <div class="btns">
+      <a href="https://www.linkedin.com/in/rohit-nikam-975824257/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/RcpRohit" target="_blank">GitHub</a>
+      <a href="https://yourdomain.com/resume.pdf" target="_blank">Resume</a>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills container" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-list">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Java</div>
+      <div class="skill-box">Spring MVC</div>
+      <div class="skill-box">MySQL</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects container" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-list">
+      <div class="project-card">
+        <h3>CRM FOR ISP</h3>
+        <p>SERVICE MAN AND USER MAPPING</p>
+        <a href="https://github.com/your-github/student-management" target="_blank">View</a>
+      </div>
+      <div class="project-card">
+        <h3>Inventory System</h3>
+        <p>Track raw & processed items in warehouse.</p>
+        <a href="https://github.com/your-github/inventory-system" target="_blank">View</a>
+      </div>
+      <div class="project-card">
+        <h3>TNP REVIEW SYSTEM</h3>
+        <p>REVIEW SYSTEM FOR THE ST</p>
+        <a href="https://github.com/your-github/secure-pariksha" target="_blank">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact container" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd2Nv6ouLTF7lDNaDuHuOJWyFhoUfNVpjs_EYknSJHTaaWXEA/viewform?usp=header" method="POST" enctype="text/plain">
+      <input type="text" name="entry.1000000" placeholder="Your Name" required />
+      <input type="email" name="entry.1000001" placeholder="Your Email" required />
+      <textarea name="entry.1000002" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Rohit Nikam. All rights reserved.
+  </footer>
+
+</body>
+</html>
